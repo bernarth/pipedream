@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export default {
-  name: 'Source=Test',
+  name: 'Source-Test',
   version: '0.0.1',
   key: 'source-test',
   description: 'This is a public source test.',
