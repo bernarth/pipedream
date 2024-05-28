@@ -2,7 +2,7 @@ import axios from "axios";
 
 export default {
   name: "Action-Test",
-  version: "0.0.2",
+  version: "0.0.3",
   key: "action-test",
   description: "This is a public action test.",
   type: "action",
@@ -13,13 +13,7 @@ export default {
       description: 'The word to search for.',
       optional: false,
       default: 'hello'
-    },
-    testProp: {
-      type: 'string',
-      label: 'Test Prop',
-      description: 'The test prop.',
-      optional: false
-    },
+    }
   },
   methods: {},
   async run({ $ }) {
