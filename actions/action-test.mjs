@@ -2,7 +2,7 @@ import axios from "axios";
 
 export default {
   name: "Action-Test",
-  version: "0.0.1",
+  version: "0.0.2",
   key: "action-test",
   description: "This is a public action test.",
   type: "action",
@@ -26,7 +26,7 @@ export default {
     const headers = {
       'Content-Type': 'application/json',
     };
-    console.log(this.word);
+    
     const response = await axios.post(`https://api.dictionaryapi.dev/api/v2/entries/en/${this.word}`, {}, { headers });
 
     return response.data;
