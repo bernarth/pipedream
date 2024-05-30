@@ -2,7 +2,7 @@ import axios from 'axios';
 
 export default {
   name: 'Source-Test',
-  version: '0.0.5',
+  version: '0.0.6',
   key: 'source-test',
   description: 'This is a public source test.',
   type: 'source',
@@ -13,13 +13,7 @@ export default {
       description: 'The word to search for.',
       optional: false,
       default: 'hello'
-    },
-    testProp: {
-      type: 'string',
-      label: 'Test Prop',
-      description: 'The test prop.',
-      optional: false
-    },
+    }
   },
   methods: {},
   async run({ $ }) {
