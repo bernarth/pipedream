@@ -5,12 +5,11 @@ export default {
   description: "This is a dictionary builder test.",
   type: "action",
   props: {
-    meanings: {
-      type: 'object[]',
-      label: 'Meanings',
-      description: 'The meaning for a word.',
-      optional: false,
-      default: 'hello'
+    phonetic: {
+      type: 'string',
+      label: 'Phonetic',
+      description: 'The word phonetic.',
+      optional: false
     },
     word: {
       type: 'string',
@@ -21,18 +20,9 @@ export default {
   },
   methods: {},
   async run({ $ }) {
-    if (this.meanings && this.meanings.length > 0) {
-      const meaning = this.meanings[0];
-
-      return {
-        word: this.word,
-        meaning: `${meaning.partOfSpeech}: ${meaning.definitions[0].definition}`
-      }
-    }
-
     return {
       word: this.word,
-      meaning: ""
+      phonetic: this.phonetic
     }
   },
 };
