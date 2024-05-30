@@ -2,7 +2,7 @@ import axios from 'axios';
 
 export default {
   name: 'Source-Test',
-  version: '0.0.4',
+  version: '0.0.5',
   key: 'source-test',
   description: 'This is a public source test.',
   type: 'source',
@@ -32,7 +32,7 @@ export default {
 
     this.$emit(response.data, {
       summary: `Response - ${this.word} - ${date}`,
-      id: summary,
+      id: `${this.word}-${date}`,
     });
   },
 };
