@@ -2,7 +2,7 @@ import axios from 'axios';
 
 export default {
   name: 'Source-Test',
-  version: '0.0.3',
+  version: '0.0.4',
   key: 'source-test',
   description: 'This is a public source test.',
   type: 'source',
@@ -31,7 +31,7 @@ export default {
     const response = await axios.get(`https://api.dictionaryapi.dev/api/v2/entries/en/${this.word}`, {}, { headers });
 
     this.$emit(response.data, {
-      summary: `Response - ${word} - ${date}`,
+      summary: `Response - ${this.word} - ${date}`,
       id: summary,
     });
   },
